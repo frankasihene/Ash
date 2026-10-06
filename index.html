@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
-<title>ASH - Blue Black Fixed - No Savings Tab</title>
+<title>ASH V7 - Individual Goal TopUp Pages</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -16,7 +16,6 @@ body{background:#041536;margin:0}
 </head>
 <body class="max-w-[430px] mx-auto bg-[#041536] relative overflow-x-hidden min-h-screen pb-[80px]">
 
-<!-- ONBOARD - DARK -->
 <div id="p-onboard" class="page active flex-col px-6 pt-10 pb-8 bg-[#041536]">
   <div class="flex-1 flex flex-col">
     <div class="flex items-center gap-2"><div class="w-9 h-9 bg-gradient-to-br from-[#5AC8FF] to-[#2A7DFF] rounded-lg flex items-center justify-center font-black text-white">A</div><div><div class="font-black text-white tracking-widest text-[20px] leading-none">ASH</div><div class="text-[7px] text-[#5AC8FF] tracking-[2px]">SAVE • GROW • ACHIEVE</div></div></div>
@@ -27,39 +26,21 @@ body{background:#041536;margin:0}
   </div>
 </div>
 
-<!-- LOGIN - RESTORED PREVIOUS DARK LOOK -->
 <div id="p-login" class="page flex-col px-6 pt-6 bg-[#041536]">
-  <div class="flex items-center justify-between">
-    <button onclick="go('onboard')" class="w-9 h-9 rounded-full bg-[#0A234E] border border-white/10 flex items-center justify-center text-white">←</button>
-    <div class="flex items-center gap-2"><div class="w-7 h-7 bg-gradient-to-br from-[#5AC8FF] to-[#2A7DFF] rounded-md flex items-center justify-center font-black text-white text-[12px]">A</div><span class="font-black text-white">ASH</span></div>
-    <div class="w-9"></div>
-  </div>
+  <div class="flex items-center justify-between"><button onclick="go('onboard')" class="w-9 h-9 rounded-full bg-[#0A234E] border border-white/10 flex items-center justify-center text-white">←</button><div class="flex items-center gap-2"><div class="w-7 h-7 bg-gradient-to-br from-[#5AC8FF] to-[#2A7DFF] rounded-md flex items-center justify-center font-black text-white text-[12px]">A</div><span class="font-black text-white">ASH</span></div><div class="w-9"></div></div>
   <h2 class="mt-10 text-[24px] font-bold text-white">Welcome back</h2><p class="text-[12px] text-white/50 mt-1">Log in to your account</p>
   <div class="mt-8 space-y-4">
-    <div class="bg-[#0A234E]/80 border border-[#1A3A78] rounded-xl flex items-center px-4 py-3.5 gap-3">
-      <span>🇬🇭</span><span class="text-white/70 text-[12px]">+233</span><span class="text-white/20">|</span>
-      <input placeholder="Phone Number" class="flex-1 bg-transparent outline-none text-white text-[13px] placeholder:text-white/30 ml-2"/>
-      <span class="text-white/30">👤</span>
-    </div>
-    <div class="bg-[#0A234E]/80 border border-[#1A3A78] rounded-xl flex items-center px-4 py-3.5 gap-3">
-      <span class="text-white/40">🔒</span>
-      <input id="lp" type="password" placeholder="Password" class="flex-1 bg-transparent outline-none text-white text-[13px] placeholder:text-white/30"/>
-      <button onclick="document.getElementById('lp').type=document.getElementById('lp').type==='password'?'text':'password'" class="text-white/30">👁</button>
-    </div>
-    <button onclick="go('home')" class="w-full bg-[#3A9CFF] text-white py-4 rounded-xl font-bold mt-2 shadow-[0_8px_24px_rgba(58,156,255,0.35)]">Submit</button>
+    <div class="bg-[#0A234E]/80 border border-[#1A3A78] rounded-xl flex items-center px-4 py-3.5 gap-3"><span>🇬🇭</span><span class="text-white/70 text-[12px]">+233</span><span class="text-white/20">|</span><input placeholder="Phone Number" class="flex-1 bg-transparent outline-none text-white text-[13px] placeholder:text-white/30 ml-2"/><span class="text-white/30">👤</span></div>
+    <div class="bg-[#0A234E]/80 border border-[#1A3A78] rounded-xl flex items-center px-4 py-3.5 gap-3"><span class="text-white/40">🔒</span><input id="lp" type="password" placeholder="Password" class="flex-1 bg-transparent outline-none text-white text-[13px] placeholder:text-white/30"/><button onclick="document.getElementById('lp').type=document.getElementById('lp').type==='password'?'text':'password'" class="text-white/30">👁</button></div>
+    <button onclick="go('home')" class="w-full bg-[#3A9CFF] text-white py-4 rounded-xl font-bold mt-2">Submit</button>
     <p class="text-center text-[12px] text-[#5AC8FF] mt-2">Forget Password?</p>
-    <div class="mt-16 flex items-center justify-center gap-2 text-[10px] text-white/30"><span>Secure •</span><span>Private •</span><span>Always</span></div>
   </div>
 </div>
 
-<!-- HOME - DARK - NO SAVINGS TAB TILE -->
 <div id="p-home" class="page flex-col bg-[#041536]">
   <div class="px-5 pt-8">
     <div class="flex justify-between"><div><p class="text-white font-bold">Hi Frank</p><p class="text-[11px] text-white/50">Good to see you again!</p></div><div class="w-8 h-8 bg-[#0A234E] border border-white/10 rounded-full flex items-center justify-center text-white/60">🔔</div></div>
-    <div class="mt-4 bg-gradient-to-r from-[#123A8A] to-[#1E5CFF] rounded-2xl p-4 flex justify-between items-center">
-      <div class="flex gap-3 items-center"><div class="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center">💼</div><div><p class="text-[10px] text-white/70">Wallet Balance</p><p id="wBal" class="font-bold text-white">GHC ****</p></div></div>
-      <button onclick="toggleW()" class="text-white/80">👁 ›</button>
-    </div>
+    <div class="mt-4 bg-gradient-to-r from-[#123A8A] to-[#1E5CFF] rounded-2xl p-4 flex justify-between items-center"><div class="flex gap-3 items-center"><div class="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center">💼</div><div><p class="text-[10px] text-white/70">Wallet Balance</p><p id="wBal" class="font-bold text-white">GHC ****</p></div></div><button onclick="toggleW()" class="text-white/80">👁 ›</button></div>
     <div class="mt-4 grid grid-cols-3 gap-3">
       <button onclick="go('quick')" class="flex flex-col items-center gap-2"><div class="w-12 h-12 bg-[#102C6D] border border-[#1E4AA3]/50 rounded-xl flex items-center justify-center text-[#5AC8FF]">⚡</div><span class="text-[9px] text-white/70">Quick<br>Save</span></button>
       <button onclick="go('lockpay')" class="flex flex-col items-center gap-2"><div class="w-12 h-12 bg-[#2D1B69] border border-[#6B4EFF]/30 rounded-xl flex items-center justify-center text-[#C4B5FF]">🔒</div><span class="text-[9px] text-white/70">Lock<br>Pay</span></button>
@@ -70,46 +51,58 @@ body{background:#041536;margin:0}
   </div>
 </div>
 
-<!-- QUICK PAY - FIXED SEPARATE WALLET - DARK -->
 <div id="p-quick" class="page flex-col bg-[#041536] px-5 pt-6">
   <div class="flex items-center justify-between"><button onclick="go('home')" class="w-9 h-9 bg-[#0A234E] border border-white/10 rounded-full flex items-center justify-center text-white">←</button><span class="font-bold text-[14px] text-white">Quick Save</span><span class="text-white/30">ⓘ</span></div>
-  <div class="mt-4 bg-gradient-to-br from-[#0A234E] to-[#123A8A] border border-[#1A3A78] rounded-[20px] p-5 text-white relative">
-    <p class="text-[12px] text-white/50">Quick Save Balance</p><p id="quickBal" class="text-[24px] font-bold mt-1">GHC ****</p>
-    <button onclick="toggleQ()" class="absolute right-5 top-[40px] text-white/40">👁</button>
-    <button onclick="openTopUp('Quick Save')" class="mt-4 bg-[#3A9CFF] text-white px-6 py-2.5 rounded-xl text-[13px] font-bold">Top Up</button>
-  </div>
+  <div class="mt-4 bg-gradient-to-br from-[#0A234E] to-[#123A8A] border border-[#1A3A78] rounded-[20px] p-5 text-white relative"><p class="text-[12px] text-white/50">Quick Save Balance</p><p id="quickBal" class="text-[24px] font-bold mt-1">GHC ****</p><button onclick="toggleQ()" class="absolute right-5 top-[40px] text-white/40">👁</button><button onclick="openTopUp('Quick Save')" class="mt-4 bg-[#3A9CFF] text-white px-6 py-2.5 rounded-xl text-[13px] font-bold">Top Up</button></div>
   <button onclick="openTopUp('Quick Save')" class="mt-3 w-full bg-white/5 border border-white/10 text-white/80 py-3 rounded-xl font-bold text-[13px]">Withdraw</button>
   <h4 class="mt-6 font-bold text-[13px] text-white">Quick Save History</h4>
   <div id="quickTx" class="mt-3 space-y-2 pb-24"></div>
 </div>
 
-<!-- SAFE LOCK LIST - DARK -->
 <div id="p-safelock" class="page flex-col bg-[#041536] px-5 pt-6">
   <div class="flex items-center justify-between"><button onclick="go('home')" class="w-9 h-9 bg-[#0A234E] border border-white/10 rounded-full flex items-center justify-center text-white">←</button><span class="font-bold text-[14px] text-white">Safe Lock</span><button class="w-8 h-8 bg-[#0A234E] border border-white/10 rounded-full flex items-center justify-center text-white/50">ⓘ</button></div>
-  <div class="mt-4 bg-[#0A1930] border border-[#1A3A78] rounded-[20px] p-5 text-white relative overflow-hidden flex justify-between items-center">
-    <div><p class="text-[13px] text-white/60">Total Amount</p><p id="safeTotalBal" class="text-[20px] font-bold mt-1">GHC ****</p><button onclick="openCreate('safe')" class="mt-3 bg-white text-[#0A1930] px-6 py-2 rounded-lg text-[13px] font-bold">Create</button></div>
-    <div class="text-[60px] opacity-80">🐖</div>
-    <button onclick="toggleSafe()" class="absolute right-[100px] top-[40px] text-white/40">👁</button>
-  </div>
+  <div class="mt-4 bg-[#0A1930] border border-[#1A3A78] rounded-[20px] p-5 text-white relative flex justify-between items-center"><div><p class="text-[13px] text-white/60">Total Amount</p><p id="safeTotalBal" class="text-[20px] font-bold mt-1">GHC ****</p><button onclick="openCreate('safe')" class="mt-3 bg-white text-[#0A1930] px-6 py-2 rounded-lg text-[13px] font-bold">Create</button></div><div class="text-[60px] opacity-80">🐖</div><button onclick="toggleSafe()" class="absolute right-[100px] top-[40px] text-white/40">👁</button></div>
   <button onclick="openTopUp('Safe Lock')" class="mt-3 w-full border border-white/20 text-white py-3 rounded-xl font-bold text-[13px]">Top Up</button>
-  <h4 class="mt-6 font-bold text-[16px] text-white">All Goals</h4>
+  <h4 class="mt-6 font-bold text-[16px] text-white">All Goals • Tap to Open & Top Up</h4>
   <div id="safeGoalsList" class="mt-3 space-y-4 pb-24"></div>
 </div>
 
-<!-- LOCK PAY LIST - DARK PURPLE -->
 <div id="p-lockpay" class="page flex-col bg-[#041536] px-5 pt-6">
   <div class="flex items-center justify-between"><button onclick="go('home')" class="w-9 h-9 bg-[#0A234E] border border-white/10 rounded-full flex items-center justify-center text-white">←</button><span class="font-bold text-[14px] text-white">Lock Pay</span><button class="w-8 h-8 bg-[#0A234E] border border-white/10 rounded-full flex items-center justify-center text-white/50">ⓘ</button></div>
-  <div class="mt-4 bg-gradient-to-br from-[#6A1BB0] to-[#A030D0] border border-[#A030D0]/30 rounded-[20px] p-5 text-white relative overflow-hidden flex justify-between items-center">
-    <div><p class="text-[13px] text-white/80">Lock Pay Balance</p><p id="lockTotalBal" class="text-[20px] font-bold mt-1">GHC ****</p><button onclick="openCreate('lock')" class="mt-3 bg-white text-[#A030D0] px-6 py-2 rounded-lg text-[13px] font-bold">Create</button></div>
-    <div class="text-[50px] opacity-60">🔒</div>
-    <button onclick="toggleLock()" class="absolute right-[100px] top-[40px] text-white/60">👁</button>
-  </div>
+  <div class="mt-4 bg-gradient-to-br from-[#6A1BB0] to-[#A030D0] border border-[#A030D0]/30 rounded-[20px] p-5 text-white relative flex justify-between items-center"><div><p class="text-[13px] text-white/80">Lock Pay Balance</p><p id="lockTotalBal" class="text-[20px] font-bold mt-1">GHC ****</p><button onclick="openCreate('lock')" class="mt-3 bg-white text-[#A030D0] px-6 py-2 rounded-lg text-[13px] font-bold">Create</button></div><div class="text-[50px] opacity-60">🔒</div><button onclick="toggleLock()" class="absolute right-[100px] top-[40px] text-white/60">👁</button></div>
   <button onclick="openTopUp('Lock Pay')" class="mt-3 w-full border border-[#A030D0]/50 text-[#D8A0FF] py-3 rounded-xl font-bold text-[13px]">Top Up</button>
-  <h4 class="mt-6 font-bold text-[16px] text-white">All Goals</h4>
+  <h4 class="mt-6 font-bold text-[16px] text-white">All Goals • Tap to Open & Top Up</h4>
   <div id="lockGoalsList" class="mt-3 space-y-3 pb-24"></div>
 </div>
 
-<!-- TRANSACTIONS - DARK -->
+<!-- SAFE LOCK INDIVIDUAL GOAL PAGE -->
+<div id="p-safe-detail" class="page flex-col bg-[#041536] px-5 pt-6">
+  <div class="flex items-center justify-between"><button onclick="go('safelock')" class="w-9 h-9 bg-[#0A234E] border border-white/10 rounded-full flex items-center justify-center text-white">←</button><span class="font-bold text-[14px] text-white">Goal Details</span><button onclick="openEditSafeFromDetail()" class="w-8 h-8 bg-[#0A234E] border border-white/10 rounded-full flex items-center justify-center text-white/70 text-[12px]">✎</button></div>
+  <div class="mt-5 ash-card rounded-[20px] p-5">
+    <div class="flex gap-3"><div class="w-12 h-12 border border-white/20 rounded-full flex items-center justify-center text-white">◎</div><div class="flex-1"><p id="sdName" class="font-bold text-[18px] text-white">Blvk</p><p id="sdPct" class="text-[12px] text-[#7ED321] font-bold">41% • GHC 2050 / 5000</p><div class="w-full h-2 bg-white/10 rounded-full mt-3"><div id="sdBar" class="h-full bg-[#7ED321] rounded-full" style="width:41%"></div></div><div class="flex justify-between mt-3"><div><p id="sdSaved" class="font-bold text-[14px] text-white">GHC 2050</p><p class="text-[10px] text-white/40">Saved</p></div><div class="text-right"><p id="sdTarget" class="font-bold text-[14px] text-white">GHC 5000</p><p class="text-[10px] text-white/40">Target</p></div></div></div></div>
+  </div>
+  <div class="mt-5 bg-[#0A234E] border border-white/10 rounded-2xl p-4">
+    <p class="font-bold text-[13px] text-white">Top Up This Goal</p>
+    <div class="mt-3 flex gap-2"><input id="sdTopupAmt" type="number" placeholder="Amount GHS" class="flex-1 bg-[#041536] border border-white/10 rounded-xl px-4 py-3 text-[14px] font-bold text-white"/><button onclick="topUpCurrentSafe()" class="bg-[#3A9CFF] text-white px-6 py-3 rounded-xl font-bold text-[13px]">Top Up</button></div>
+    <div class="mt-3 grid grid-cols-3 gap-2"><button onclick="document.getElementById('sdTopupAmt').value=50" class="bg-white/5 border border-white/10 text-white/70 py-2 rounded-lg text-[12px]">+50</button><button onclick="document.getElementById('sdTopupAmt').value=100" class="bg-white/5 border border-white/10 text-white/70 py-2 rounded-lg text-[12px]">+100</button><button onclick="document.getElementById('sdTopupAmt').value=200" class="bg-white/5 border border-white/10 text-white/70 py-2 rounded-lg text-[12px]">+200</button></div>
+  </div>
+  <div class="mt-5"><div class="flex justify-between items-center"><p class="font-bold text-[13px] text-white">Goal Activity</p><button onclick="openEditSafeFromDetail()" class="text-[#5AC8FF] text-[11px]">Rename Goal</button></div><div id="sdHistory" class="mt-3 space-y-2 pb-24"></div></div>
+</div>
+
+<!-- LOCK PAY INDIVIDUAL GOAL PAGE -->
+<div id="p-lock-detail" class="page flex-col bg-[#041536] px-5 pt-6">
+  <div class="flex items-center justify-between"><button onclick="go('lockpay')" class="w-9 h-9 bg-[#0A234E] border border-white/10 rounded-full flex items-center justify-center text-white">←</button><span class="font-bold text-[14px] text-white">Goal Details</span><button onclick="openEditLockFromDetail()" class="w-8 h-8 bg-[#0A234E] border border-white/10 rounded-full flex items-center justify-center text-white/70 text-[12px]">✎</button></div>
+  <div class="mt-5 bg-gradient-to-br from-[#6A1BB0] to-[#A030D0] border border-white/10 rounded-[20px] p-5 text-white">
+    <p id="ldName" class="font-bold text-[18px]">Xmas</p><p id="ldDate" class="text-[12px] text-white/70 mt-1">Sun, 20 Dec 2026</p><p id="ldAmt" class="text-[24px] font-bold mt-3">GHC 200</p>
+  </div>
+  <div class="mt-5 bg-[#0A234E] border border-white/10 rounded-2xl p-4">
+    <p class="font-bold text-[13px] text-white">Top Up This Lock Pay Goal</p>
+    <div class="mt-3 flex gap-2"><input id="ldTopupAmt" type="number" placeholder="Amount GHS" class="flex-1 bg-[#041536] border border-white/10 rounded-xl px-4 py-3 text-[14px] font-bold text-white"/><button onclick="topUpCurrentLock()" class="bg-[#A030D0] text-white px-6 py-3 rounded-xl font-bold text-[13px]">Top Up</button></div>
+    <div class="mt-3 grid grid-cols-3 gap-2"><button onclick="document.getElementById('ldTopupAmt').value=50" class="bg-white/5 border border-white/10 text-white/70 py-2 rounded-lg text-[12px]">+50</button><button onclick="document.getElementById('ldTopupAmt').value=100" class="bg-white/5 border border-white/10 text-white/70 py-2 rounded-lg text-[12px]">+100</button><button onclick="document.getElementById('ldTopupAmt').value=200" class="bg-white/5 border border-white/10 text-white/70 py-2 rounded-lg text-[12px]">+200</button></div>
+  </div>
+  <div class="mt-5"><div class="flex justify-between items-center"><p class="font-bold text-[13px] text-white">Goal Activity</p><button onclick="openEditLockFromDetail()" class="text-[#D8A0FF] text-[11px]">Rename Goal</button></div><div id="ldHistory" class="mt-3 space-y-2 pb-24"></div></div>
+</div>
+
 <div id="p-transactions" class="page flex-col bg-[#041536] px-5 pt-6">
   <h2 class="font-bold text-[18px] text-white">Transactions</h2>
   <div class="mt-4 flex gap-2"><div class="flex-1 bg-[#0A234E] border border-white/10 rounded-xl flex items-center px-3 py-2.5 gap-2"><span class="text-white/30">🔍</span><input id="txSearch" oninput="render()" placeholder="Search transactions..." class="flex-1 bg-transparent outline-none text-[12px] text-white placeholder:text-white/30"/></div></div>
@@ -117,7 +110,6 @@ body{background:#041536;margin:0}
   <div id="fullTx" class="mt-4 space-y-2 pb-24"></div>
 </div>
 
-<!-- ACCOUNT - DARK FULLY CLICKABLE -->
 <div id="p-account" class="page flex-col bg-[#041536] px-5 pt-8">
   <h2 class="font-bold text-[18px] text-white">Account</h2>
   <div class="mt-5 ash-card rounded-2xl p-4 flex items-center justify-between"><div class="flex gap-3 items-center"><div class="w-12 h-12 bg-[#123A8A] rounded-full flex items-center justify-center text-white text-[20px]">👤</div><div><p class="font-bold text-[13px] text-white">Frank Asihene</p><p class="text-[11px] text-white/40">Personal Savings • 0244 000 001</p></div></div><button onclick="openProfile()" class="text-[#5AC8FF] text-[12px] font-bold">Edit</button></div>
@@ -131,78 +123,84 @@ body{background:#041536;margin:0}
   </div>
 </div>
 
-<!-- CREATE SAFE LOCK - DARK -->
 <div id="p-create-safe" class="page flex-col bg-[#041536] px-5 pt-6">
   <div class="flex items-center gap-3"><button onclick="go('safelock')" class="w-9 h-9 bg-[#0A234E] border border-white/10 rounded-full flex items-center justify-center text-white">←</button><h2 class="font-bold text-[16px] text-white">Create Safe Lock</h2></div>
   <div class="mt-6 space-y-4 pb-24">
     <div><label class="text-[13px] font-semibold text-white">Savings Goal</label><input id="safePurpose" placeholder="Enter Purpose for Saving" class="mt-1 w-full bg-[#0A234E] border border-[#1A3A78] rounded-lg px-4 py-3 text-[13px] text-white placeholder:text-white/30"/><p class="text-[10px] text-white/30 italic mt-1">eg. Rent,Fees,Travel&Vacation,Business etc</p></div>
     <div><label class="text-[13px] font-semibold text-white">Targeted Amount</label><input id="safeTarget" type="number" placeholder="How Much is your Target?" class="mt-1 w-full bg-[#0A234E] border border-[#1A3A78] rounded-lg px-4 py-3 text-[13px] text-white placeholder:text-white/30"/></div>
     <div><label class="text-[13px] font-semibold text-white">Amount</label><input id="safeStart" type="number" placeholder="How much are you starting with?" class="mt-1 w-full bg-[#0A234E] border border-[#1A3A78] rounded-lg px-4 py-3 text-[13px] text-white placeholder:text-white/30"/></div>
-    <div class="pt-4 space-y-4">
-      <div class="flex items-center gap-3"><button id="t1" onclick="toggleSwitch('t1')" class="toggle-off w-12 h-7 rounded-full relative"><span class="absolute w-5 h-5 bg-white rounded-full top-1 left-1"></span></button><span class="text-[12px] text-white/70">Allow Cashout during Emergency</span></div>
-      <div class="flex items-center gap-3"><button id="t2" onclick="toggleSwitch('t2')" class="toggle-on w-12 h-7 rounded-full relative"><span class="absolute w-5 h-5 bg-white rounded-full top-1 left-6"></span></button><span class="text-[12px] leading-tight text-white/70">I authorise ASH to Safe Lock my Goal till I meet the Target Amount I have Set.</span></div>
-      <div class="flex items-center gap-3"><button id="t3" onclick="toggleSwitch('t3')" class="toggle-on w-12 h-7 rounded-full relative"><span class="absolute w-5 h-5 bg-white rounded-full top-1 left-6"></span></button><span class="text-[12px] leading-tight text-white/70">I hereby acknowledge that, this Safe Lock CANNOT be broken once it has been created</span></div>
-    </div>
+    <div class="pt-4 space-y-4"><div class="flex items-center gap-3"><button id="t1" onclick="toggleSwitch('t1')" class="toggle-off w-12 h-7 rounded-full relative"><span class="absolute w-5 h-5 bg-white rounded-full top-1 left-1"></span></button><span class="text-[12px] text-white/70">Allow Cashout during Emergency</span></div><div class="flex items-center gap-3"><button id="t2" onclick="toggleSwitch('t2')" class="toggle-on w-12 h-7 rounded-full relative"><span class="absolute w-5 h-5 bg-white rounded-full top-1 left-6"></span></button><span class="text-[12px] leading-tight text-white/70">I authorise ASH to Safe Lock my Goal till I meet the Target Amount I have Set.</span></div><div class="flex items-center gap-3"><button id="t3" onclick="toggleSwitch('t3')" class="toggle-on w-12 h-7 rounded-full relative"><span class="absolute w-5 h-5 bg-white rounded-full top-1 left-6"></span></button><span class="text-[12px] leading-tight text-white/70">I hereby acknowledge that, this Safe Lock CANNOT be broken once it has been created</span></div></div>
     <button onclick="createSafeGoal()" class="w-full bg-[#3A9CFF] text-white py-4 rounded-xl font-bold mt-6">Proceed</button>
   </div>
 </div>
 
-<!-- CREATE LOCK PAY - DARK -->
 <div id="p-create-lock" class="page flex-col bg-[#041536] px-5 pt-6">
   <div class="flex items-center gap-3"><button onclick="go('lockpay')" class="w-9 h-9 bg-[#0A234E] border border-white/10 rounded-full flex items-center justify-center text-white">←</button><h2 class="font-bold text-[16px] text-white">Create Lock Pay</h2></div>
   <div class="mt-6 space-y-4 pb-24">
     <div><label class="text-[13px] font-semibold text-white">Savings Goal</label><input id="lockPurpose" placeholder="Enter Purpose for Saving" class="mt-1 w-full bg-[#0A234E] border border-[#1A3A78] rounded-lg px-4 py-3 text-[13px] text-white placeholder:text-white/30"/><p class="text-[10px] text-white/30 italic mt-1">eg. Rent,Fees,Travel&Vacation,Business etc</p></div>
     <div><label class="text-[13px] font-semibold text-white">Amount</label><input id="lockAmt" type="number" placeholder="Enter Amount" class="mt-1 w-full bg-[#0A234E] border border-[#1A3A78] rounded-lg px-4 py-3 text-[13px] text-white placeholder:text-white/30"/></div>
-    <div class="pt-2"><p class="text-[14px] font-bold text-orange-400 text-center">Select when to Cash Out</p>
-      <div class="mt-3 space-y-3">
-        <label class="flex items-center gap-3 text-white/80"><input type="radio" name="dur" value="30" checked onchange="updateLockDays()" class="w-5 h-5 accent-[#3A9CFF]"/><span class="text-[13px]">1 Month - 3 Months Time</span></label>
-        <label class="flex items-center gap-3 text-white/80"><input type="radio" name="dur" value="120" onchange="updateLockDays()" class="w-5 h-5 accent-[#3A9CFF]"/><span class="text-[13px]">3 Months - 6 Months Time</span></label>
-        <label class="flex items-center gap-3 text-white/80"><input type="radio" name="dur" value="240" onchange="updateLockDays()" class="w-5 h-5 accent-[#3A9CFF]"/><span class="text-[13px]">6 Months - 12 Months Time</span></label>
-      </div>
-    </div>
-    <div class="pt-2"><p id="cashOutText" class="text-[15px] font-bold text-orange-400 text-center">30 Days To Cash Out( Thu, 5 Nov 2026 )</p><p class="text-[12px] text-orange-300/70 text-center mt-1">Slide to Choose Days for Cash Out</p>
-      <div class="flex items-center gap-3 mt-3"><span class="text-[13px] font-bold text-white">30</span><input id="daySlider" type="range" min="30" max="90" value="30" oninput="updateLockDays()" class="flex-1 accent-orange-400"/><span class="text-[13px] font-bold text-white">90</span></div>
-    </div>
-    <div class="space-y-4 pt-2">
-      <div class="flex gap-3"><button id="lt1" onclick="toggleSwitch('lt1')" class="toggle-off w-12 h-7 rounded-full relative"><span class="absolute w-5 h-5 bg-white rounded-full top-1 left-1"></span></button><span class="text-[12px] text-white/70">Allow Cashout during Emergency</span></div>
-      <div class="flex gap-3"><button id="lt2" onclick="toggleSwitch('lt2')" class="toggle-on w-12 h-7 rounded-full relative"><span class="absolute w-5 h-5 bg-white rounded-full top-1 left-6"></span></button><span class="text-[12px] text-white/70">I authorise ASH to Lock my Goal till the due date I have Set.</span></div>
-      <div class="flex gap-3"><button id="lt3" onclick="toggleSwitch('lt3')" class="toggle-on w-12 h-7 rounded-full relative"><span class="absolute w-5 h-5 bg-white rounded-full top-1 left-6"></span></button><span class="text-[12px] text-white/70">I hereby acknowledge that, this Lock Pay CANNOT be broken once it has been created</span></div>
-    </div>
+    <div class="pt-2"><p class="text-[14px] font-bold text-orange-400 text-center">Select when to Cash Out</p><div class="mt-3 space-y-3"><label class="flex items-center gap-3 text-white/80"><input type="radio" name="dur" value="30" checked onchange="updateLockDays()" class="w-5 h-5 accent-[#3A9CFF]"/><span class="text-[13px]">1 Month - 3 Months Time</span></label><label class="flex items-center gap-3 text-white/80"><input type="radio" name="dur" value="120" onchange="updateLockDays()" class="w-5 h-5 accent-[#3A9CFF]"/><span class="text-[13px]">3 Months - 6 Months Time</span></label><label class="flex items-center gap-3 text-white/80"><input type="radio" name="dur" value="240" onchange="updateLockDays()" class="w-5 h-5 accent-[#3A9CFF]"/><span class="text-[13px]">6 Months - 12 Months Time</span></label></div></div>
+    <div class="pt-2"><p id="cashOutText" class="text-[15px] font-bold text-orange-400 text-center">30 Days To Cash Out( Thu, 5 Nov 2026 )</p><p class="text-[12px] text-orange-300/70 text-center mt-1">Slide to Choose Days for Cash Out</p><div class="flex items-center gap-3 mt-3"><span class="text-[13px] font-bold text-white">30</span><input id="daySlider" type="range" min="30" max="90" value="30" oninput="updateLockDays()" class="flex-1 accent-orange-400"/><span class="text-[13px] font-bold text-white">90</span></div></div>
+    <div class="space-y-4 pt-2"><div class="flex gap-3"><button id="lt1" onclick="toggleSwitch('lt1')" class="toggle-off w-12 h-7 rounded-full relative"><span class="absolute w-5 h-5 bg-white rounded-full top-1 left-1"></span></button><span class="text-[12px] text-white/70">Allow Cashout during Emergency</span></div><div class="flex gap-3"><button id="lt2" onclick="toggleSwitch('lt2')" class="toggle-on w-12 h-7 rounded-full relative"><span class="absolute w-5 h-5 bg-white rounded-full top-1 left-6"></span></button><span class="text-[12px] text-white/70">I authorise ASH to Lock my Goal till the due date I have Set.</span></div><div class="flex gap-3"><button id="lt3" onclick="toggleSwitch('lt3')" class="toggle-on w-12 h-7 rounded-full relative"><span class="absolute w-5 h-5 bg-white rounded-full top-1 left-6"></span></button><span class="text-[12px] text-white/70">I hereby acknowledge that, this Lock Pay CANNOT be broken once it has been created</span></div></div>
     <button onclick="createLockGoal()" class="w-full bg-[#3A9CFF] text-white py-4 rounded-xl font-bold mt-4">Proceed</button>
   </div>
 </div>
 
-<!-- BOTTOM NAV - 3 TABS ONLY, DARK -->
 <nav id="bottomNav" class="fixed bottom-0 left-0 right-0 max-w-[430px] mx-auto bg-[#071D45]/95 backdrop-blur-xl border-t border-white/10 px-8 py-3 flex justify-between z-40 hidden">
   <button onclick="go('home')" data-b="home" class="bnav text-[#5AC8FF] flex flex-col items-center"><span class="text-[18px]">⌂</span><span class="text-[9px] font-bold">Home</span></button>
   <button onclick="go('transactions')" data-b="transactions" class="bnav text-white/40 flex flex-col items-center"><span class="text-[18px]">☷</span><span class="text-[9px] font-bold">Activity</span></button>
   <button onclick="go('account')" data-b="account" class="bnav text-white/40 flex flex-col items-center"><span class="text-[18px]">●</span><span class="text-[9px] font-bold">Account</span></button>
 </nav>
 
-<!-- MODALS - DARK -->
+<!-- TOPUP GENERIC -->
 <div id="topupModal" class="fixed inset-0 z-[60] hidden"><div class="absolute inset-0 bg-black/70" onclick="closeTopUp()"></div><div class="absolute bottom-0 left-0 right-0 max-w-[430px] mx-auto bg-[#0A234E] border-t border-white/10 rounded-t-[24px] p-6"><h3 id="topupTitle" class="font-bold text-white">Top Up</h3><input id="topupAmt" type="number" placeholder="Amount GHS" class="mt-4 w-full bg-[#041536] border border-white/10 rounded-xl px-4 py-4 text-[18px] font-bold text-white"/><button onclick="doTopUp()" class="mt-4 w-full bg-[#3A9CFF] text-white py-4 rounded-xl font-bold">Confirm • Pay with MoMo</button></div></div>
+
+<!-- EDIT MODALS -->
+<div id="editSafeModal" class="fixed inset-0 z-[70] hidden"><div class="absolute inset-0 bg-black/70" onclick="closeEditSafe()"></div><div class="absolute bottom-0 left-0 right-0 max-w-[430px] mx-auto bg-[#0A234E] border-t border-white/10 rounded-t-[24px] p-6"><div class="w-10 h-1 bg-white/20 rounded-full mx-auto mb-4"></div><h3 class="font-bold text-white text-[16px]">Rename Safe Lock Goal</h3><div class="mt-4 space-y-3"><label class="text-[11px] text-white/50">Goal Name</label><input id="editSafeName" placeholder="Enter new name" class="w-full bg-[#041536] border border-[#1A3A78] rounded-xl px-4 py-3 text-[13px] text-white"/><label class="text-[11px] text-white/50">Target Amount (GHS)</label><input id="editSafeTarget" type="number" placeholder="Target" class="w-full bg-[#041536] border border-[#1A3A78] rounded-xl px-4 py-3 text-[13px] text-white"/><label class="text-[11px] text-white/50">Saved Amount (GHS)</label><input id="editSafeSaved" type="number" placeholder="Saved" class="w-full bg-[#041536] border border-[#1A3A78] rounded-xl px-4 py-3 text-[13px] text-white"/></div><div class="mt-5 grid grid-cols-2 gap-3"><button onclick="deleteSafeGoal()" class="bg-red-500/20 border border-red-500/30 text-red-400 py-3 rounded-xl font-bold text-[13px]">Delete Goal</button><button onclick="saveEditSafe()" class="bg-[#3A9CFF] text-white py-3 rounded-xl font-bold text-[13px]">Save Changes</button></div></div></div>
+
+<div id="editLockModal" class="fixed inset-0 z-[70] hidden"><div class="absolute inset-0 bg-black/70" onclick="closeEditLock()"></div><div class="absolute bottom-0 left-0 right-0 max-w-[430px] mx-auto bg-[#0A234E] border-t border-white/10 rounded-t-[24px] p-6"><div class="w-10 h-1 bg-white/20 rounded-full mx-auto mb-4"></div><h3 class="font-bold text-white text-[16px]">Rename Lock Pay Goal</h3><div class="mt-4 space-y-3"><label class="text-[11px] text-white/50">Goal Name</label><input id="editLockName" placeholder="Enter new name" class="w-full bg-[#041536] border border-[#1A3A78] rounded-xl px-4 py-3 text-[13px] text-white"/><label class="text-[11px] text-white/50">Amount (GHS)</label><input id="editLockAmt" type="number" placeholder="Amount" class="w-full bg-[#041536] border border-[#1A3A78] rounded-xl px-4 py-3 text-[13px] text-white"/><label class="text-[11px] text-white/50">Cashout Date</label><input id="editLockDate" placeholder="Sun, 20 Dec 2026" class="w-full bg-[#041536] border border-[#1A3A78] rounded-xl px-4 py-3 text-[13px] text-white"/></div><div class="mt-5 grid grid-cols-2 gap-3"><button onclick="deleteLockGoal()" class="bg-red-500/20 border border-red-500/30 text-red-400 py-3 rounded-xl font-bold text-[13px]">Delete Goal</button><button onclick="saveEditLock()" class="bg-[#A030D0] text-white py-3 rounded-xl font-bold text-[13px]">Save Changes</button></div></div></div>
+
 <div id="profileModal" class="fixed inset-0 z-[70] hidden"><div class="absolute inset-0 bg-black/70" onclick="closeProfile()"></div><div class="absolute bottom-0 left-0 right-0 max-w-[430px] mx-auto bg-[#0A234E] border-t border-white/10 rounded-t-[24px] p-6"><h3 class="font-bold text-white">Edit Profile</h3><input id="editName" value="Frank Asihene" class="mt-4 w-full bg-[#041536] border border-white/10 rounded-xl px-4 py-3 text-white"/><input value="0244 000 001" class="mt-3 w-full bg-[#041536] border border-white/10 rounded-xl px-4 py-3 text-white"/><button onclick="closeProfile()" class="mt-4 w-full bg-[#3A9CFF] text-white py-3 rounded-xl font-bold">Save Changes</button></div></div>
 <div id="securityModal" class="fixed inset-0 z-[70] hidden"><div class="absolute inset-0 bg-black/70" onclick="closeSecurity()"></div><div class="absolute bottom-0 left-0 right-0 max-w-[430px] mx-auto bg-[#0A234E] border-t border-white/10 rounded-t-[24px] p-6"><h3 class="font-bold text-white">Security</h3><input type="password" placeholder="Old Password" class="mt-4 w-full bg-[#041536] border border-white/10 rounded-xl px-4 py-3 text-white"/><input type="password" placeholder="New Password" class="mt-3 w-full bg-[#041536] border border-white/10 rounded-xl px-4 py-3 text-white"/><input type="password" placeholder="Confirm New PIN" class="mt-3 w-full bg-[#041536] border border-white/10 rounded-xl px-4 py-3 text-white"/><button onclick="closeSecurity();alert('Password Updated ✓')" class="mt-4 w-full bg-[#3A9CFF] text-white py-3 rounded-xl font-bold">Update Security</button></div></div>
 <div id="linkedModal" class="fixed inset-0 z-[70] hidden"><div class="absolute inset-0 bg-black/70" onclick="closeLinked()"></div><div class="absolute bottom-0 left-0 right-0 max-w-[430px] mx-auto bg-[#0A234E] border-t border-white/10 rounded-t-[24px] p-6"><h3 class="font-bold text-white">Linked Accounts</h3><div class="mt-4 space-y-3"><div class="bg-[#041536] border border-white/10 rounded-xl p-4 flex justify-between"><div><p class="font-bold text-[13px] text-white">MTN MoMo</p><p class="text-[11px] text-white/40">0244 000 001 • Frank A.</p></div><span class="text-green-400 text-[12px]">Default</span></div><div class="bg-[#041536] border border-white/10 rounded-xl p-4 flex justify-between"><div><p class="font-bold text-[13px] text-white">GCB Bank</p><p class="text-[11px] text-white/40">**** 4521 • Savings</p></div><button class="text-red-400 text-[11px]">Remove</button></div><button class="w-full border border-dashed border-white/20 rounded-xl py-3 text-[12px] text-white/40">+ Add New Account</button></div><button onclick="closeLinked()" class="mt-4 w-full bg-[#3A9CFF] text-white py-3 rounded-xl font-bold">Done</button></div></div>
 <div id="notifModal" class="fixed inset-0 z-[70] hidden"><div class="absolute inset-0 bg-black/70" onclick="closeNotifs()"></div><div class="absolute bottom-0 left-0 right-0 max-w-[430px] mx-auto bg-[#0A234E] border-t border-white/10 rounded-t-[24px] p-6"><h3 class="font-bold text-white">Notifications</h3><div class="mt-4 space-y-4"><div class="flex justify-between items-center text-white"><span class="text-[13px]">Transaction Alerts</span><button id="n1" onclick="toggleSwitch('n1')" class="toggle-on w-12 h-7 rounded-full relative"><span class="absolute w-5 h-5 bg-white rounded-full top-1 left-6"></span></button></div><div class="flex justify-between items-center text-white"><span class="text-[13px]">Savings Reminders</span><button id="n2" onclick="toggleSwitch('n2')" class="toggle-on w-12 h-7 rounded-full relative"><span class="absolute w-5 h-5 bg-white rounded-full top-1 left-6"></span></button></div><div class="flex justify-between items-center text-white"><span class="text-[13px]">Promos & Offers</span><button id="n3" onclick="toggleSwitch('n3')" class="toggle-off w-12 h-7 rounded-full relative"><span class="absolute w-5 h-5 bg-white rounded-full top-1 left-1"></span></button></div></div><button onclick="closeNotifs()" class="mt-6 w-full bg-[#3A9CFF] text-white py-3 rounded-xl font-bold">Save</button></div></div>
-<div id="helpModal" class="fixed inset-0 z-[70] hidden"><div class="absolute inset-0 bg-black/70" onclick="closeHelp()"></div><div class="absolute bottom-0 left-0 right-0 max-w-[430px] mx-auto bg-[#0A234E] border-t border-white/10 rounded-t-[24px] p-6 max-h-[80vh] overflow-y-auto"><h3 class="font-bold text-white">Help & Support</h3><div class="mt-4 space-y-2 text-[12px]"><details class="bg-[#041536] border border-white/10 rounded-xl p-3"><summary class="font-bold text-white">How does Safe Lock work?</summary><p class="mt-2 text-white/50">Safe Lock locks your funds till you meet target amount. Cannot be broken.</p></details><details class="bg-[#041536] border border-white/10 rounded-xl p-3"><summary class="font-bold text-white">How does Lock Pay work?</summary><p class="mt-2 text-white/50">Lock Pay locks for selected days (30-365). You choose cashout date.</p></details><div class="bg-[#123A8A]/30 border border-[#3A9CFF]/20 rounded-xl p-4 mt-4"><p class="font-bold text-white">Contact Us</p><p class="text-[11px] text-white/60 mt-1">WhatsApp: 0244 000 001<br>Email: support@ash.com.gh</p></div></div><button onclick="closeHelp()" class="mt-4 w-full bg-[#3A9CFF] text-white py-3 rounded-xl font-bold">Close</button></div></div>
-<div id="kycModal" class="fixed inset-0 z-[70] hidden"><div class="absolute inset-0 bg-black/70" onclick="closeKyc()"></div><div class="absolute bottom-0 left-0 right-0 max-w-[430px] mx-auto bg-[#0A234E] border-t border-white/10 rounded-t-[24px] p-6"><h3 class="font-bold text-white">KYC Verification</h3><div class="mt-4 bg-green-900/30 border border-green-500/20 rounded-xl p-4 flex gap-3"><span class="text-green-400 text-[20px]">✓</span><div><p class="font-bold text-[13px] text-green-300">Verified</p><p class="text-[11px] text-green-200/60">Ghana Card • Frank Asihene • Verified on 12 Jan 2026</p></div></div><button onclick="closeKyc()" class="mt-4 w-full bg-[#3A9CFF] text-white py-3 rounded-xl font-bold">Done</button></div></div>
+<div id="helpModal" class="fixed inset-0 z-[70] hidden"><div class="absolute inset-0 bg-black/70" onclick="closeHelp()"></div><div class="absolute bottom-0 left-0 right-0 max-w-[430px] mx-auto bg-[#0A234E] border-t border-white/10 rounded-t-[24px] p-6"><h3 class="font-bold text-white">Help & Support</h3><div class="mt-4 space-y-2 text-[12px]"><details class="bg-[#041536] border border-white/10 rounded-xl p-3"><summary class="font-bold text-white">How does Safe Lock work?</summary><p class="mt-2 text-white/50">Safe Lock locks your funds till you meet target amount. Cannot be broken.</p></details><div class="bg-[#123A8A]/30 border border-[#3A9CFF]/20 rounded-xl p-4 mt-4"><p class="font-bold text-white">Contact Us</p><p class="text-[11px] text-white/60 mt-1">WhatsApp: 0244 000 001<br>Email: support@ash.com.gh</p></div></div><button onclick="closeHelp()" class="mt-4 w-full bg-[#3A9CFF] text-white py-3 rounded-xl font-bold">Close</button></div></div>
+<div id="kycModal" class="fixed inset-0 z-[70] hidden"><div class="absolute inset-0 bg-black/70" onclick="closeKyc()"></div><div class="absolute bottom-0 left-0 right-0 max-w-[430px] mx-auto bg-[#0A234E] border-t border-white/10 rounded-t-[24px] p-6"><h3 class="font-bold text-white">KYC Verification</h3><div class="mt-4 bg-green-900/30 border border-green-500/20 rounded-xl p-4 flex gap-3"><span class="text-green-400 text-[20px]">✓</span><div><p class="font-bold text-[13px] text-green-300">Verified</p><p class="text-[11px] text-green-200/60">Ghana Card • Frank Asihene</p></div></div><button onclick="closeKyc()" class="mt-4 w-full bg-[#3A9CFF] text-white py-3 rounded-xl font-bold">Done</button></div></div>
 
 <script>
 let wVis=false,qVis=false,safeVis=false,lockVis=false,curTopUpType='Quick Save',curFilter='all';
-let safeGoals=JSON.parse(localStorage.getItem('ash_safe')||'null')||[{name:'Blvk',saved:2050,target:5000,icon:'◎'},{name:'20ft Shipping Container',saved:100,target:10000,icon:'◎'},{name:'Itk Lyte',saved:100,target:2500,icon:'◎'},{name:'Land',saved:20,target:7000,icon:'◎'}];
-let lockGoals=JSON.parse(localStorage.getItem('ash_lock')||'null')||[{name:'Xmas',amt:200,date:'Sun, 20 Dec 2026',icon:'◎'}];
-let txs=JSON.parse(localStorage.getItem('ash_txs')||'null')||[{type:'Quick Save',amt:50,date:'Thu, 1 Oct 2026 09:08 pm',status:'Success'},{type:'Lock Pay',amt:10,date:'Thu, 1 Oct 2026 09:06 pm',status:'Success'},{type:'Safe Lock',amt:10,date:'Thu, 1 Oct 2026 09:01 pm',status:'Failed'},{type:'Lock Pay',amt:20,date:'Thu, 1 Oct 2026 08:57 pm',status:'Success'}];
+let curSafeIdx=null,curLockIdx=null,curEditSafeIndex=null,curEditLockIndex=null;
+let safeGoals=JSON.parse(localStorage.getItem('ash_safe_v7')||'null')||[
+  {name:'Blvk',saved:2050,target:5000,icon:'◎',history:[{amt:2050,date:'Thu, 1 Oct 2026 09:01 pm'}]},
+  {name:'20ft Shipping Container',saved:100,target:10000,icon:'◎',history:[{amt:100,date:'Thu, 1 Oct 2026'}]},
+  {name:'Itk Lyte',saved:100,target:2500,icon:'◎',history:[{amt:100,date:'Thu, 1 Oct 2026'}]},
+  {name:'Land',saved:20,target:7000,icon:'◎',history:[{amt:20,date:'Thu, 1 Oct 2026'}]},
+];
+let lockGoals=JSON.parse(localStorage.getItem('ash_lock_v7')||'null')||[
+  {name:'Xmas',amt:200,date:'Sun, 20 Dec 2026',icon:'◎',history:[{amt:200,date:'Thu, 1 Oct 2026 09:06 pm'}]},
+];
+let txs=JSON.parse(localStorage.getItem('ash_txs_v7')||'null')||[
+  {type:'Quick Save',amt:50,date:'Thu, 1 Oct 2026 09:08 pm',status:'Success'},
+  {type:'Lock Pay',amt:10,date:'Thu, 1 Oct 2026 09:06 pm',status:'Success'},
+  {type:'Safe Lock',amt:10,date:'Thu, 1 Oct 2026 09:01 pm',status:'Failed'},
+];
 let balances={quick:520,safe:2270,lock:200};
-function saveAll(){localStorage.setItem('ash_safe',JSON.stringify(safeGoals));localStorage.setItem('ash_lock',JSON.stringify(lockGoals));localStorage.setItem('ash_txs',JSON.stringify(txs));}
+
+function saveAll(){
+  localStorage.setItem('ash_safe_v7',JSON.stringify(safeGoals));
+  localStorage.setItem('ash_lock_v7',JSON.stringify(lockGoals));
+  localStorage.setItem('ash_txs_v7',JSON.stringify(txs));
+  localStorage.setItem('ash_bal_v7',JSON.stringify(balances));
+}
 function go(id){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
-  document.getElementById('p-'+id).classList.add('active');
-  let show=['home','quick','safelock','lockpay','transactions','account'].includes(id);
+  let el=document.getElementById('p-'+id);
+  if(el) el.classList.add('active');
+  let show=['home','quick','safelock','lockpay','transactions','account','safe-detail','lock-detail'].includes(id);
   document.getElementById('bottomNav').style.display=show?'flex':'none';
-  document.querySelectorAll('.bnav').forEach(b=>b.classList.remove('text-[#5AC8FF]'));document.querySelectorAll('.bnav').forEach(b=>b.classList.add('text-white/40'));
-  let map={home:'home',quick:'home',safelock:'home',lockpay:'home',transactions:'transactions',account:'account','create-safe':'home','create-lock':'home'};
-  let b=map[id]||id; let el=document.querySelector(`[data-b="${b}"]`); if(el){el.classList.remove('text-white/40');el.classList.add('text-[#5AC8FF]')}
+  document.querySelectorAll('.bnav').forEach(b=>{b.classList.remove('text-[#5AC8FF]');b.classList.add('text-white/40')});
+  let map={home:'home',quick:'home',safelock:'home',lockpay:'home','safe-detail':'home','lock-detail':'home',transactions:'transactions',account:'account','create-safe':'home','create-lock':'home'};
+  let b=map[id]||id; let navEl=document.querySelector(`[data-b="${b}"]`); if(navEl){navEl.classList.remove('text-white/40');navEl.classList.add('text-[#5AC8FF]')}
   render();
 }
 function toggleW(){wVis=!wVis;document.getElementById('wBal').innerText=wVis?'GHC '+balances.quick:'GHC ****';}
@@ -221,8 +219,8 @@ function closeTopUp(){document.getElementById('topupModal').classList.add('hidde
 function doTopUp(){
   let amt=parseFloat(document.getElementById('topupAmt').value)||0; if(!amt) return;
   if(curTopUpType==='Quick Save') balances.quick+=amt;
-  if(curTopUpType==='Safe Lock'){balances.safe+=amt; if(safeGoals.length>0) safeGoals[0].saved+=amt;}
-  if(curTopUpType==='Lock Pay'){balances.lock+=amt; if(lockGoals.length>0) lockGoals[0].amt+=amt;}
+  if(curTopUpType==='Safe Lock'){balances.safe+=amt; if(safeGoals.length>0){safeGoals[0].saved+=amt; safeGoals[0].history.unshift({amt,date:new Date().toLocaleString()});}}
+  if(curTopUpType==='Lock Pay'){balances.lock+=amt; if(lockGoals.length>0){lockGoals[0].amt+=amt; lockGoals[0].history.unshift({amt,date:new Date().toLocaleString()});}}
   txs.unshift({type:curTopUpType,amt,date:new Date().toLocaleString(),status:'Success'});
   document.getElementById('topupAmt').value=''; closeTopUp(); saveAll(); render();
 }
@@ -231,9 +229,8 @@ function createSafeGoal(){
   let target=parseFloat(document.getElementById('safeTarget').value)||0;
   let start=parseFloat(document.getElementById('safeStart').value)||0;
   if(!purpose||!target){alert('Enter purpose and target');return;}
-  safeGoals.unshift({name:purpose,saved:start,target:target,icon:'◎'});
-  balances.safe+=start;
-  txs.unshift({type:'Safe Lock',amt:start,date:new Date().toLocaleString(),status:'Success'});
+  safeGoals.unshift({name:purpose,saved:start,target:target,icon:'◎',history:start?[{amt:start,date:new Date().toLocaleString()}]:[]});
+  balances.safe+=start; txs.unshift({type:'Safe Lock',amt:start,date:new Date().toLocaleString(),status:'Success'});
   saveAll(); go('safelock');
 }
 function createLockGoal(){
@@ -242,9 +239,8 @@ function createLockGoal(){
   let days=document.getElementById('daySlider').value;
   if(!purpose||!amt){alert('Enter purpose and amount');return;}
   let future=new Date(); future.setDate(future.getDate()+parseInt(days));
-  lockGoals.unshift({name:purpose,amt:amt,date:future.toDateString(),icon:'◎'});
-  balances.lock+=amt;
-  txs.unshift({type:'Lock Pay',amt:amt,date:new Date().toLocaleString(),status:'Success'});
+  lockGoals.unshift({name:purpose,amt:amt,date:future.toDateString(),icon:'◎',history:[{amt,date:new Date().toLocaleString()}]});
+  balances.lock+=amt; txs.unshift({type:'Lock Pay',amt:amt,date:new Date().toLocaleString(),status:'Success'});
   saveAll(); go('lockpay');
 }
 function updateLockDays(){
@@ -253,6 +249,97 @@ function updateLockDays(){
   document.getElementById('cashOutText').innerText=days+' Days To Cash Out( '+future.toDateString()+' )';
 }
 function setF(f){curFilter=f; document.querySelectorAll('.ft').forEach(b=>{b.className='ft bg-[#0A234E] border border-white/10 text-white/50 px-4 py-1.5 rounded-full text-[11px]'}); document.querySelector(`[data-ft="${f}"]`).className='ft bg-[#3A9CFF] text-white px-4 py-1.5 rounded-full text-[11px]'; render();}
+
+// GOAL DETAIL OPEN
+function openSafeDetail(i){
+  curSafeIdx=i; let g=safeGoals[i];
+  let pct=Math.min(100,Math.round(g.saved/g.target*100))||0;
+  document.getElementById('sdName').innerText=g.name;
+  document.getElementById('sdPct').innerText=pct+'% • GHC '+g.saved+' / '+g.target;
+  document.getElementById('sdBar').style.width=pct+'%';
+  document.getElementById('sdSaved').innerText='GHC '+g.saved;
+  document.getElementById('sdTarget').innerText='GHC '+g.target;
+  document.getElementById('sdHistory').innerHTML=(g.history||[]).map(h=>`<div class="bg-[#0A234E]/70 border border-white/5 rounded-xl p-3 flex justify-between"><div><p class="text-white text-[12px] font-semibold">Top Up</p><p class="text-[10px] text-white/40">${h.date}</p></div><p class="text-[#4ADE80] font-bold text-[12px]">+GHS ${h.amt}</p></div>`).join('')||'<p class="text-white/30 text-[12px] text-center">No activity yet</p>';
+  document.getElementById('sdTopupAmt').value='';
+  go('safe-detail');
+}
+function openLockDetail(i){
+  curLockIdx=i; let g=lockGoals[i];
+  document.getElementById('ldName').innerText=g.name;
+  document.getElementById('ldDate').innerText=g.date;
+  document.getElementById('ldAmt').innerText='GHC '+g.amt;
+  document.getElementById('ldHistory').innerHTML=(g.history||[]).map(h=>`<div class="bg-[#0A234E]/70 border border-white/5 rounded-xl p-3 flex justify-between"><div><p class="text-white text-[12px] font-semibold">Top Up</p><p class="text-[10px] text-white/40">${h.date}</p></div><p class="text-[#D8A0FF] font-bold text-[12px]">+GHS ${h.amt}</p></div>`).join('')||'<p class="text-white/30 text-[12px] text-center">No activity yet</p>';
+  document.getElementById('ldTopupAmt').value='';
+  go('lock-detail');
+}
+function topUpCurrentSafe(){
+  let amt=parseFloat(document.getElementById('sdTopupAmt').value)||0; if(!amt||curSafeIdx===null) return;
+  safeGoals[curSafeIdx].saved+=amt;
+  safeGoals[curSafeIdx].history.unshift({amt,date:new Date().toLocaleString()});
+  balances.safe+=amt;
+  txs.unshift({type:'Safe Lock',amt,date:new Date().toLocaleString(),status:'Success'});
+  saveAll(); openSafeDetail(curSafeIdx); render();
+}
+function topUpCurrentLock(){
+  let amt=parseFloat(document.getElementById('ldTopupAmt').value)||0; if(!amt||curLockIdx===null) return;
+  lockGoals[curLockIdx].amt+=amt;
+  lockGoals[curLockIdx].history.unshift({amt,date:new Date().toLocaleString()});
+  balances.lock+=amt;
+  txs.unshift({type:'Lock Pay',amt,date:new Date().toLocaleString(),status:'Success'});
+  saveAll(); openLockDetail(curLockIdx); render();
+}
+function openEditSafeFromDetail(){
+  if(curSafeIdx===null) return;
+  curEditSafeIndex=curSafeIdx;
+  let g=safeGoals[curSafeIdx];
+  document.getElementById('editSafeName').value=g.name;
+  document.getElementById('editSafeTarget').value=g.target;
+  document.getElementById('editSafeSaved').value=g.saved;
+  document.getElementById('editSafeModal').classList.remove('hidden');
+}
+function openEditLockFromDetail(){
+  if(curLockIdx===null) return;
+  curEditLockIndex=curLockIdx;
+  let g=lockGoals[curLockIdx];
+  document.getElementById('editLockName').value=g.name;
+  document.getElementById('editLockAmt').value=g.amt;
+  document.getElementById('editLockDate').value=g.date;
+  document.getElementById('editLockModal').classList.remove('hidden');
+}
+function openEditSafe(i){ curEditSafeIndex=i; let g=safeGoals[i]; document.getElementById('editSafeName').value=g.name; document.getElementById('editSafeTarget').value=g.target; document.getElementById('editSafeSaved').value=g.saved; document.getElementById('editSafeModal').classList.remove('hidden'); }
+function closeEditSafe(){document.getElementById('editSafeModal').classList.add('hidden'); curEditSafeIndex=null;}
+function saveEditSafe(){
+  if(curEditSafeIndex===null) return;
+  let name=document.getElementById('editSafeName').value.trim();
+  let target=parseFloat(document.getElementById('editSafeTarget').value)||safeGoals[curEditSafeIndex].target;
+  let saved=parseFloat(document.getElementById('editSafeSaved').value)||safeGoals[curEditSafeIndex].saved;
+  if(!name){alert('Name required');return;}
+  safeGoals[curEditSafeIndex].name=name; safeGoals[curEditSafeIndex].target=target; safeGoals[curEditSafeIndex].saved=saved;
+  saveAll(); closeEditSafe(); if(curSafeIdx!==null) openSafeDetail(curEditSafeIndex); render();
+}
+function deleteSafeGoal(){
+  if(curEditSafeIndex===null) return;
+  if(!confirm('Delete this goal?')) return;
+  safeGoals.splice(curEditSafeIndex,1);
+  saveAll(); closeEditSafe(); go('safelock'); render();
+}
+function openEditLock(i){ curEditLockIndex=i; let g=lockGoals[i]; document.getElementById('editLockName').value=g.name; document.getElementById('editLockAmt').value=g.amt; document.getElementById('editLockDate').value=g.date; document.getElementById('editLockModal').classList.remove('hidden'); }
+function closeEditLock(){document.getElementById('editLockModal').classList.add('hidden'); curEditLockIndex=null;}
+function saveEditLock(){
+  if(curEditLockIndex===null) return;
+  let name=document.getElementById('editLockName').value.trim();
+  let amt=parseFloat(document.getElementById('editLockAmt').value)||lockGoals[curEditLockIndex].amt;
+  let date=document.getElementById('editLockDate').value.trim()||lockGoals[curEditLockIndex].date;
+  if(!name){alert('Name required');return;}
+  lockGoals[curEditLockIndex].name=name; lockGoals[curEditLockIndex].amt=amt; lockGoals[curEditLockIndex].date=date;
+  saveAll(); closeEditLock(); if(curLockIdx!==null) openLockDetail(curEditLockIndex); render();
+}
+function deleteLockGoal(){
+  if(curEditLockIndex===null) return;
+  if(!confirm('Delete this goal?')) return;
+  lockGoals.splice(curEditLockIndex,1);
+  saveAll(); closeEditLock(); go('lockpay'); render();
+}
 function txRow(t){
   let icon=t.type==='Quick Save'?'↗':t.type==='Lock Pay'?'🔒':'◎';
   return `<div class="bg-[#0A234E]/70 border border-white/5 rounded-xl p-3 flex justify-between items-center"><div class="flex gap-3 items-center"><div class="w-8 h-8 bg-[#122E66] rounded-full flex items-center justify-center text-[#5AC8FF] text-[12px]">${icon}</div><div><p class="text-white text-[12px] font-semibold">${t.type}</p><p class="text-[10px] text-white/40">${t.date}</p></div></div><div class="text-right"><p class="text-white text-[12px] font-bold">GHS ${t.amt}</p><span class="text-[9px] px-2 py-0.5 rounded-full ${t.status==='Success'?'bg-[#0B3D1F] text-[#4ADE80]':'bg-[#3D1F1F] text-[#FF7A7A]'}">${t.status}</span></div></div>`;
@@ -260,12 +347,12 @@ function txRow(t){
 function render(){
   document.getElementById('homeTx').innerHTML=txs.slice(0,4).map(txRow).join('');
   document.getElementById('quickTx').innerHTML=txs.filter(t=>t.type==='Quick Save').map(txRow).join('')||'<p class="text-white/30 text-[12px] text-center mt-6">No quick save yet</p>';
-  document.getElementById('safeGoalsList').innerHTML=safeGoals.map(g=>{
+  document.getElementById('safeGoalsList').innerHTML=safeGoals.map((g,i)=>{
     let pct=Math.min(100,Math.round(g.saved/g.target*100))||0;
-    return `<div class="ash-card rounded-xl p-4"><div class="flex gap-3"><div class="w-8 h-8 border border-white/20 rounded-full flex items-center justify-center text-white text-[12px]">${g.icon}</div><div class="flex-1"><p class="font-bold text-[14px] text-white">${g.name}</p><div class="flex justify-between mt-2"><div><p class="font-bold text-[13px] text-white">GHC ${g.saved}</p><p class="text-[11px] text-white/40">Saved</p></div><div class="text-right"><p class="font-bold text-[13px] text-white">GHC ${g.target}</p><p class="text-[11px] text-white/40">Target</p></div></div><div class="mt-3"><div class="flex justify-between text-[11px]"><span class="text-[#7ED321] font-bold">${pct}%</span></div><div class="w-full h-1 bg-white/10 rounded-full mt-1"><div class="h-full bg-[#7ED321] rounded-full" style="width:${pct}%"></div></div></div></div></div></div>`;
+    return `<div onclick="openSafeDetail(${i})" class="ash-card rounded-xl p-4 cursor-pointer active:scale-[0.98]"><div class="flex gap-3"><div class="w-8 h-8 border border-white/20 rounded-full flex items-center justify-center text-white text-[12px]">${g.icon}</div><div class="flex-1"><div class="flex justify-between"><p class="font-bold text-[14px] text-white">${g.name}</p><span class="text-[10px] bg-white/10 border border-white/10 px-2 py-0.5 rounded-full text-white/60">Open ›</span></div><div class="flex justify-between mt-2"><div><p class="font-bold text-[13px] text-white">GHC ${g.saved}</p><p class="text-[11px] text-white/40">Saved</p></div><div class="text-right"><p class="font-bold text-[13px] text-white">GHC ${g.target}</p><p class="text-[11px] text-white/40">Target</p></div></div><div class="mt-3"><div class="flex justify-between text-[11px]"><span class="text-[#7ED321] font-bold">${pct}%</span></div><div class="w-full h-1 bg-white/10 rounded-full mt-1"><div class="h-full bg-[#7ED321] rounded-full" style="width:${pct}%"></div></div></div></div></div></div>`;
   }).join('');
-  document.getElementById('lockGoalsList').innerHTML=lockGoals.map(g=>`
-    <div class="ash-card rounded-xl p-4 flex justify-between items-center"><div class="flex gap-3 items-center"><div class="w-8 h-8 border border-purple-400/30 rounded-full flex items-center justify-center text-white text-[12px]">◎</div><div><p class="font-bold text-[14px] text-white">${g.name}</p><p class="text-[11px] text-white/40">${g.date}</p></div></div><p class="font-bold text-[13px] text-white">GHC ${g.amt}</p></div>
+  document.getElementById('lockGoalsList').innerHTML=lockGoals.map((g,i)=>`
+    <div onclick="openLockDetail(${i})" class="ash-card rounded-xl p-4 flex justify-between items-center cursor-pointer active:scale-[0.98]"><div class="flex gap-3 items-center"><div class="w-8 h-8 border border-purple-400/30 rounded-full flex items-center justify-center text-white text-[12px]">◎</div><div><div class="flex gap-2 items-center"><p class="font-bold text-[14px] text-white">${g.name}</p><span class="text-[9px] bg-white/10 border border-white/10 px-2 py-0.5 rounded-full text-white/60">Open ›</span></div><p class="text-[11px] text-white/40">${g.date}</p></div></div><p class="font-bold text-[13px] text-white">GHC ${g.amt}</p></div>
   `).join('');
   let q=(document.getElementById('txSearch')?.value||'').toLowerCase();
   let filtered=txs.filter(t=> (curFilter==='all'||t.type===curFilter) && (t.type.toLowerCase().includes(q)||String(t.amt).includes(q)) );
@@ -287,4 +374,4 @@ go('onboard');
 render();
 </script>
 </body>
-  </html>
+</html>
