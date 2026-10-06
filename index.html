@@ -1,5 +1,208 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ASH — Save • Grow • Achieve</title><link rel="stylesheet" href="style.css"></head><body><div class="app"><header><b>ASH</b><small>SAVE • GROW • ACHIEVE</small></header><main><h2>Hi, Frank 👋</h2><div class="balance"><small>Wallet Balance</small><h1 id="bal">GHS ****</h1><button onclick="toggle()">Show / Hide</button></div><div class="grid"><button onclick="act(Quick
-Save)">↗<b>Quick Save</b></button><button onclick="act(Lock
-Pay)">▣<b>Lock Pay</b></button><button onclick="act(Safe
-Lock)">◎<b>Safe Lock</b></button><button onclick="alert(Savings
-goals)">◆<b>My Savings</b></button></div><h3>Recent Transactions</h3><div id="tx"></div></main><nav>⌂ Home　 ▣ Savings　 ☷ Activity　 ● Account</nav></div><script src="app.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+<title>ASH — Save • Grow • Achieve</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{font-family:'Inter',sans-serif}
+body{background:#021124;margin:0}
+.page{display:none;min-height:100vh}
+.page.active{display:flex}
+.scroll-hide::-webkit-scrollbar{display:none}
+.progress-track{background:rgba(255,255,255,0.12)}
+.ash-card{background:linear-gradient(180deg,rgba(255,255,255,0.08) 0%,rgba(255,255,255,0.03) 100%);border:1px solid rgba(90,200,255,0.15)}
+.ash-blue{background:#081F4D}
+.btn-primary{background:#3A9CFF;box-shadow:0 8px 24px rgba(58,156,255,0.35)}
+.btn-outline{border:1.5px solid rgba(90,200,255,0.5);color:#7ED0FF}
+.icon-box{background:rgba(58,156,255,0.14);border:1px solid rgba(58,156,255,0.18)}
+</style>
+</head>
+<body class="max-w-[430px] mx-auto bg-[#041536] relative overflow-x-hidden">
+<!-- PAGE 1: ONBOARDING - Build your financial future -->
+<div id="p-onboard" class="page active flex-col px-6 pt-8 pb-6 bg-[#041536] relative">
+  <div class="flex-1 flex flex-col">
+    <div class="flex flex-col items-center">
+      <div class="flex items-center gap-2"><div class="w-9 h-9 bg-gradient-to-br from-[#5AC8FF] to-[#2A7DFF] rounded-lg flex items-center justify-center font-black text-white">A</div><div><div class="font-black text-white tracking-widest text-[20px] leading-none">ASH</div><div class="text-[7px] text-[#5AC8FF] tracking-[2px]">SAVE • GROW • ACHIEVE</div></div></div>
+      <div class="mt-8 w-full bg-gradient-to-b from-[#0A2A66] to-[#071A42] rounded-[28px] border border-[#1A3A78] p-5 flex gap-4 items-center relative overflow-hidden">
+        <div class="flex-1"><div class="text-[28px]">🧑🏾‍💻</div><div class="mt-2 text-[11px] text-white/60">Savings growth</div><div class="text-white font-bold text-[14px] flex items-center gap-1">↗ Growing <span class="bg-[#1C4DB3] text-[10px] px-2 py-0.5 rounded-full">GHS</span></div></div>
+        <div class="w-[90px] h-[80px] bg-[#0F3A8A] rounded-xl flex flex-col items-end justify-end p-2 gap-1"><div class="w-full h-3 bg-[#3A9CFF] rounded-sm"></div><div class="w-3/4 h-3 bg-[#5AC8FF] rounded-sm"></div><div class="w-1/2 h-3 bg-[#1A4DB3] rounded-sm"></div></div>
+      </div>
+      <h1 class="mt-8 text-[28px] font-extrabold text-white leading-tight text-left w-full">Build your<br><span class="text-[#5AC8FF]">financial future</span></h1>
+      <p class="mt-3 text-[12px] text-white/60 leading-relaxed w-full">Save smarter, reach your goals and create the life you want. ASH is your trusted savings partner in Ghana.</p>
+    </div>
+    <div class="mt-auto pt-10 space-y-3 w-full">
+      <button onclick="go('login')" class="w-full btn-primary text-white py-4 rounded-xl font-bold text-[14px]">Login</button>
+      <button onclick="go('login')" class="w-full btn-outline py-4 rounded-xl font-bold text-[14px] bg-transparent">Sign Up</button>
+      <div class="flex items-center justify-center gap-2 mt-4"><span class="text-[10px]">🇬🇭</span><span class="text-[10px] text-white/50">Made for Ghanaians</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 2: LOGIN -->
+<div id="p-login" class="page flex-col px-6 pt-6 bg-[#041536]">
+  <div class="flex items-center justify-between"><button onclick="go('onboard')" class="w-9 h-9 rounded-full bg-[#0A234E] border border-white/10 flex items-center justify-center text-white">←</button><div class="flex items-center gap-2"><div class="w-7 h-7 bg-gradient-to-br from-[#5AC8FF] to-[#2A7DFF] rounded-md flex items-center justify-center font-black text-white text-[12px]">A</div><span class="font-black text-white">ASH</span></div><div class="w-9"></div></div>
+  <h2 class="mt-8 text-[22px] font-bold text-white">Welcome back</h2><p class="text-[12px] text-white/60">Log in to your account</p>
+  <div class="mt-6 space-y-4">
+    <div class="bg-[#0A234E]/60 border border-[#1A3A78] rounded-xl flex items-center px-4 py-3 gap-3"><span class="text-[12px]">🇬🇭</span><span class="text-white/80 text-[12px]">+233</span><span class="text-white/20">|</span><input id="phoneInput" placeholder="Phone Number" class="flex-1 bg-transparent outline-none text-white text-[13px] placeholder:text-white/30"/><span class="text-white/40 text-[12px]">👤</span></div>
+    <div class="bg-[#0A234E]/60 border border-[#1A3A78] rounded-xl flex items-center px-4 py-3 gap-3"><span class="text-white/50 text-[12px]">🔒</span><input id="passInput" type="password" placeholder="Password" class="flex-1 bg-transparent outline-none text-white text-[13px] placeholder:text-white/30"/><button onclick="togglePass()" class="text-white/40">👁</button></div>
+    <button onclick="doLogin()" class="w-full btn-primary text-white py-4 rounded-xl font-bold mt-2">Submit</button>
+    <p class="text-center text-[12px] text-[#5AC8FF] mt-2">Forget Password?</p>
+    <div class="mt-10 flex items-center justify-center gap-2 text-[10px] text-white/40"><span>Secure •</span><span>Private •</span><span>Always</span></div>
+  </div>
+</div>
+
+<!-- PAGE 3: HOME -->
+<div id="p-home" class="page flex-col bg-[#041536]">
+  <div class="px-5 pt-8">
+    <div class="flex justify-between items-start"><div><p class="text-white font-bold text-[15px]">Hi Frank</p><p class="text-[11px] text-white/50">Good to see you again!</p></div><div class="w-8 h-8 bg-[#0A234E] border border-white/10 rounded-full flex items-center justify-center">🔔</div></div>
+    <div class="mt-4 bg-gradient-to-r from-[#123A8A] to-[#1E5CFF] rounded-2xl p-4 flex items-center justify-between relative overflow-hidden">
+      <div class="flex items-center gap-3"><div class="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center">💼</div><div><p class="text-[10px] text-white/70">Wallet Balance</p><p id="walletBal" class="font-bold text-white text-[16px]">GHS ****</p></div></div>
+      <button onclick="toggleBal()" class="flex items-center gap-2 text-white/80 text-[12px]">👁 <span>›</span></button>
+    </div>
+    <div class="mt-4 grid grid-cols-4 gap-3">
+      <button onclick="go('savings')" class="flex flex-col items-center gap-2"><div class="w-12 h-12 icon-box rounded-xl flex items-center justify-center text-[#5AC8FF]">⚡</div><span class="text-[9px] text-white/70">Quick<br>Save</span></button>
+      <button onclick="openAdd('Lock Pay')" class="flex flex-col items-center gap-2"><div class="w-12 h-12 icon-box rounded-xl flex items-center justify-center text-white/70">🔒</div><span class="text-[9px] text-white/70">Lock<br>Pay</span></button>
+      <button onclick="openAdd('Safe Lock')" class="flex flex-col items-center gap-2"><div class="w-12 h-12 icon-box rounded-xl flex items-center justify-center">🎯</div><span class="text-[9px] text-white/70">Safe<br>Lock</span></button>
+      <button onclick="go('savings')" class="flex flex-col items-center gap-2"><div class="w-12 h-12 icon-box rounded-xl flex items-center justify-center">⊞</div><span class="text-[9px] text-white/70">View<br>All</span></button>
+    </div>
+    <div class="mt-6 flex justify-between items-center"><h3 class="text-white font-bold text-[13px]">Recent Transactions</h3><button onclick="go('transactions')" class="text-[#5AC8FF] text-[11px]">See all</button></div>
+    <div id="homeTx" class="mt-3 space-y-2"></div>
+  </div>
+</div>
+
+<!-- PAGE 4: MY SAVINGS -->
+<div id="p-savings" class="page flex-col bg-[#041536] px-5 pt-8">
+  <div class="flex justify-between items-start"><div><h2 class="text-white font-bold text-[18px]">My Savings</h2><p class="text-[11px] text-white/50">Build your goals, one step at a time.</p></div><button onclick="openAdd('Quick Save')" class="w-8 h-8 bg-[#3A9CFF] rounded-full flex items-center justify-center text-white font-bold">+</button></div>
+  <div id="savingsList" class="mt-5 space-y-3 pb-24"></div>
+</div>
+
+<!-- PAGE 5: SAFE LOCK DETAIL -->
+<div id="p-safe" class="page flex-col bg-[#041536] px-5 pt-6">
+  <div class="flex items-center justify-between"><button onclick="go('savings')" class="w-8 h-8 bg-[#0A234E] rounded-full flex items-center justify-center text-white">←</button><span class="text-white font-semibold text-[14px]">Safe Lock</span><span class="text-white/50">⋯</span></div>
+  <div class="mt-5 ash-card rounded-2xl p-4">
+    <div class="flex gap-3 items-center"><div class="w-12 h-12 bg-[#0E3A8A] rounded-full flex items-center justify-center text-[#5AC8FF]">◎</div><div><p class="text-white font-bold text-[14px]">Vacation Trip</p><p class="text-[11px] text-white/50">Travel and explore Ghana and beyond.</p></div></div>
+    <div class="mt-5 grid grid-cols-2 gap-4 text-[11px]"><div><p class="text-white/40">Target Amount</p><p class="text-white font-bold">GHS 1,000</p></div><div class="text-right"><p class="text-white/40">Amount Saved</p><p class="text-white font-bold">GHS <span id="safeSaved">750</span></p></div></div>
+    <div class="mt-3"><div class="flex justify-between text-[10px] text-white/50 mb-1"><span id="safePercent">75%</span><span></span></div><div class="progress-track h-2 rounded-full overflow-hidden"><div id="safeProgress" class="h-full bg-[#3A9CFF] rounded-full" style="width:75%"></div></div></div>
+    <div class="mt-4 flex items-center justify-between bg-[#081F4D] rounded-xl p-3"><div class="flex items-center gap-2 text-[11px] text-white/70">📅 Target Date</div><span class="text-[11px] text-white">30 Jun 2027</span></div>
+    <button onclick="openAdd('Safe Lock')" class="mt-4 w-full bg-[#3A9CFF] text-white py-3 rounded-xl font-bold text-[13px] flex items-center justify-center gap-2">⊕ Add Money</button>
+  </div>
+  <div class="mt-6"><div class="flex justify-between items-center"><h4 class="text-white font-bold text-[13px]">Recent Activity</h4><button class="text-[#5AC8FF] text-[11px]">See all</button></div><div id="safeActivity" class="mt-3 space-y-2"></div></div>
+</div>
+
+<!-- PAGE 6: TRANSACTIONS -->
+<div id="p-transactions" class="page flex-col bg-[#041536] px-5 pt-6">
+  <h2 class="text-white font-bold text-[18px]">Transactions</h2>
+  <div class="mt-4 flex gap-2"><div class="flex-1 bg-[#0A234E] border border-white/10 rounded-xl flex items-center px-3 py-2.5 gap-2"><span class="text-white/40 text-[12px]">🔍</span><input id="txSearch" oninput="renderAll()" placeholder="Search transactions..." class="flex-1 bg-transparent outline-none text-[12px] text-white placeholder:text-white/30"/></div><button class="w-10 h-10 bg-[#0A234E] border border-white/10 rounded-xl flex items-center justify-center text-white/60">☰</button></div>
+  <div class="mt-4 flex gap-2 overflow-x-auto scroll-hide pb-1"><button onclick="filterTx('all')" data-f="all" class="txFilter bg-[#3A9CFF] text-white px-4 py-1.5 rounded-full text-[11px] font-bold">All</button><button onclick="filterTx('Quick Save')" data-f="Quick Save" class="txFilter bg-[#0A234E] text-white/60 px-4 py-1.5 rounded-full text-[11px]">Savings</button><button onclick="filterTx('Lock Pay')" data-f="Lock Pay" class="txFilter bg-[#0A234E] text-white/60 px-4 py-1.5 rounded-full text-[11px]">Lock Pay</button><button onclick="filterTx('Safe Lock')" data-f="Safe Lock" class="txFilter bg-[#0A234E] text-white/60 px-4 py-1.5 rounded-full text-[11px]">Safe Lock</button></div>
+  <div id="fullTxList" class="mt-4 space-y-2 pb-24"></div>
+</div>
+
+<!-- PAGE 7: ACCOUNT -->
+<div id="p-account" class="page flex-col bg-[#041536] px-5 pt-8">
+  <h2 class="text-white font-bold text-[18px]">Account</h2>
+  <div class="mt-5 ash-card rounded-2xl p-4 flex items-center justify-between"><div class="flex gap-3 items-center"><div class="w-10 h-10 bg-[#E6F0FF] rounded-full flex items-center justify-center">👤</div><div><p class="text-white font-bold text-[13px]">Frank Asihene</p><p class="text-[11px] text-white/50">Personal Savings</p></div></div><button class="text-[#5AC8FF] text-[11px]">Edit</button></div>
+  <div class="mt-4 space-y-3">
+    <div class="ash-card rounded-xl p-4 flex justify-between items-center"><div class="flex gap-3 items-center"><span class="w-8 h-8 bg-[#0A234E] rounded-full flex items-center justify-center text-[12px]">🔒</span><div><p class="text-white text-[12px] font-semibold">Security</p><p class="text-[10px] text-white/40">Change password & PIN</p></div></div><span class="text-white/30">›</span></div>
+    <div class="ash-card rounded-xl p-4 flex justify-between items-center"><div class="flex gap-3 items-center"><span class="w-8 h-8 bg-[#0A234E] rounded-full flex items-center justify-center text-[12px]">🏦</span><div><p class="text-white text-[12px] font-semibold">Linked Accounts</p><p class="text-[10px] text-white/40">MoMo & Bank Accounts</p></div></div><span class="text-white/30">›</span></div>
+    <div class="ash-card rounded-xl p-4 flex justify-between items-center"><div class="flex gap-3 items-center"><span class="w-8 h-8 bg-[#0A234E] rounded-full flex items-center justify-center text-[12px]">🔔</span><div><p class="text-white text-[12px] font-semibold">Notifications</p><p class="text-[10px] text-white/40">Transaction alerts & updates</p></div></div><span class="text-white/30">›</span></div>
+    <div class="ash-card rounded-xl p-4 flex justify-between items-center"><div class="flex gap-3 items-center"><span class="w-8 h-8 bg-[#0A234E] rounded-full flex items-center justify-center text-[12px]">❓</span><div><p class="text-white text-[12px] font-semibold">Help & Support</p><p class="text-[10px] text-white/40">FAQs and contact us</p></div></div><span class="text-white/30">›</span></div>
+    <button onclick="go('onboard')" class="w-full mt-4 bg-[#0A234E] border border-white/10 rounded-xl py-3 text-white/60 text-[12px]">⍈ Log Out</button>
+  </div>
+</div>
+
+<!-- PAGE 8: SPLASH -->
+<div id="p-splash" class="page flex-col items-center justify-center bg-[#041536] px-6">
+  <div class="flex items-center gap-3"><div class="w-12 h-12 bg-gradient-to-br from-[#5AC8FF] to-[#2A7DFF] rounded-xl flex items-center justify-center font-black text-white text-[22px]">A</div><div><div class="font-black text-white text-[28px] tracking-widest leading-none">ASH</div><div class="text-[9px] text-[#5AC8FF] tracking-[3px]">SAVE • GROW • ACHIEVE</div></div></div>
+  <h2 class="mt-10 text-white font-bold text-[20px] text-center">Your Savings.<br><span class="text-[#5AC8FF]">Your Future.</span></h2>
+  <div class="mt-10 flex items-center gap-2 text-[10px] text-white/50"><span>🇬🇭</span> Proudly Ghanaian</div>
+</div>
+
+<!-- BOTTOM NAV -->
+<nav id="bottomNav" class="fixed bottom-0 left-0 right-0 max-w-[430px] mx-auto bg-[#071D45]/95 backdrop-blur-xl border-t border-white/10 px-8 py-3 flex justify-between z-40 hidden">
+  <button onclick="go('home')" data-nav="home" class="navItem flex flex-col items-center gap-1 text-[#5AC8FF]"><span class="text-[18px]">⌂</span><span class="text-[9px]">Home</span></button>
+  <button onclick="go('savings')" data-nav="savings" class="navItem flex flex-col items-center gap-1 text-white/40"><span class="text-[18px]">◫</span><span class="text-[9px]">Savings</span></button>
+  <button onclick="go('account')" data-nav="account" class="navItem flex flex-col items-center gap-1 text-white/40"><span class="text-[18px]">◍</span><span class="text-[9px]">Account</span></button>
+</nav>
+
+<!-- ADD MONEY MODAL -->
+<div id="addModal" class="fixed inset-0 z-[70] hidden"><div class="absolute inset-0 bg-black/70" onclick="closeAdd()"></div><div class="absolute bottom-0 left-0 right-0 max-w-[430px] mx-auto bg-[#0A234E] border-t border-white/10 rounded-t-[28px] p-6"><div class="w-10 h-1 bg-white/20 rounded-full mx-auto mb-4"></div><h3 id="addTitle" class="text-white font-bold text-[16px]">Add Money</h3><input id="addAmt" type="number" placeholder="Amount GHS" class="mt-4 w-full bg-[#041536] border border-white/10 rounded-xl px-4 py-4 text-white text-[18px] font-bold outline-none"/><div class="grid grid-cols-3 gap-2 mt-3"><button onclick="setAmt(50)" class="bg-[#041536] border border-white/10 rounded-xl py-2 text-white/70 text-[12px]">50</button><button onclick="setAmt(100)" class="bg-[#041536] border border-white/10 rounded-xl py-2 text-white/70 text-[12px]">100</button><button onclick="setAmt(500)" class="bg-[#041536] border border-white/10 rounded-xl py-2 text-white/70 text-[12px]">500</button></div><button onclick="confirmAdd()" class="mt-5 w-full bg-[#3A9CFF] text-white py-4 rounded-xl font-bold">Confirm • Pay with MoMo</button></div></div>
+
+<script>
+let balVisible=false;
+let curFilter='all';
+let curAddType='Quick Save';
+let balance=2540;
+let goals=[
+  {id:1,name:'Quick Save',amt:520,target:0,icon:'⚡',color:'#3A9CFF',progress:52,note:'No target • Anytime',date:''},
+  {id:2,name:'Lock Pay',amt:300,target:1000,icon:'🔒',color:'#7A7A7A',progress:30,note:'Target: GHS 1,000 • 31 Dec 2026',date:'31 Dec 2026'},
+  {id:3,name:'Safe Lock',amt:750,target:1000,icon:'🎯',color:'#3A9CFF',progress:75,note:'Target: GHS 1,000 • 31 Dec 2026',date:'30 Jun 2027'},
+  {id:4,name:'Vacation Trip',amt:200,target:1000,icon:'✈️',color:'#3A9CFF',progress:20,note:'Target: GHS 1,000 • 30 Jun 2027',date:'30 Jun 2027'},
+];
+let txs=[
+  {id:1,type:'Quick Save',amt:50,date:'Thu, 1 Oct 2026 09:08 pm',status:'Success'},
+  {id:2,type:'Lock Pay',amt:10,date:'Thu, 1 Oct 2026 09:06 pm',status:'Success'},
+  {id:3,type:'Safe Lock',amt:10,date:'Thu, 1 Oct 2026 09:01 pm',status:'Failed'},
+  {id:4,type:'Lock Pay',amt:20,date:'Thu, 1 Oct 2026 08:57 pm',status:'Success'},
+  {id:5,type:'Quick Save',amt:30,date:'Thu, 1 Oct 2026 08:40 pm',status:'Success'},
+];
+
+function go(id){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById('p-'+id).classList.add('active');
+  let showNav=['home','savings','transactions','safe','account'].includes(id);
+  document.getElementById('bottomNav').style.display=showNav?'flex':'none';
+  document.querySelectorAll('.navItem').forEach(n=>{n.classList.remove('text-[#5AC8FF]');n.classList.add('text-white/40')});
+  let map={home:'home',savings:'savings',safe:'savings',transactions:'home',account:'account'};
+  let nav=map[id]||id;
+  let el=document.querySelector(`[data-nav="${nav}"]`); if(el){el.classList.remove('text-white/40');el.classList.add('text-[#5AC8FF]')}
+  if(id==='home'||id==='transactions'||id==='savings'||id==='safe') renderAll();
+}
+function doLogin(){ go('home'); }
+function togglePass(){ let i=document.getElementById('passInput'); i.type=i.type==='password'?'text':'password'; }
+function toggleBal(){ balVisible=!balVisible; document.getElementById('walletBal').innerText=balVisible?'GHS '+balance.toLocaleString():'GHS ****'; }
+function filterTx(f){ curFilter=f; document.querySelectorAll('.txFilter').forEach(b=>{b.className='txFilter bg-[#0A234E] text-white/60 px-4 py-1.5 rounded-full text-[11px]'}); let active=document.querySelector(`[data-f="${f}"]`); if(active) active.className='txFilter bg-[#3A9CFF] text-white px-4 py-1.5 rounded-full text-[11px] font-bold'; renderAll(); }
+function openAdd(type){ curAddType=type; document.getElementById('addTitle').innerText=type==='Safe Lock'?'Add to Safe Lock':type; document.getElementById('addModal').classList.remove('hidden'); }
+function closeAdd(){ document.getElementById('addModal').classList.add('hidden'); }
+function setAmt(v){ document.getElementById('addAmt').value=v; }
+function confirmAdd(){
+  let amt=parseFloat(document.getElementById('addAmt').value)||0; if(!amt) return;
+  txs.unshift({id:Date.now(),type:curAddType,amt,date:new Date().toLocaleString(),status:'Success'});
+  balance+=amt;
+  if(curAddType==='Safe Lock'||curAddType==='Vacation Trip'){
+    let g=goals.find(x=>x.name.includes('Safe')||x.name==='Vacation Trip'); if(g){ g.amt+=amt; if(g.target) g.progress=Math.min(100,Math.round(g.amt/g.target*100)); }
+  }
+  closeAdd(); document.getElementById('addAmt').value=''; renderAll(); if(balVisible) document.getElementById('walletBal').innerText='GHS '+balance.toLocaleString();
+}
+
+function txRow(t){
+  let icon = t.type==='Quick Save'?'↗':t.type==='Lock Pay'?'🔒':t.type==='Safe Lock'?'◎':'✈️';
+  return `<div class="bg-[#0A234E]/70 border border-white/5 rounded-xl p-3 flex justify-between items-center">
+    <div class="flex gap-3 items-center"><div class="w-8 h-8 bg-[#122E66] rounded-full flex items-center justify-center text-[#5AC8FF] text-[12px]">${icon}</div><div><p class="text-white text-[12px] font-semibold">${t.type}</p><p class="text-[10px] text-white/40">${t.date}</p></div></div>
+    <div class="text-right"><p class="text-white text-[12px] font-bold">GHS ${t.amt}</p><span class="text-[9px] px-2 py-0.5 rounded-full ${t.status==='Success'?'bg-[#0B3D1F] text-[#4ADE80]':'bg-[#3D1F1F] text-[#FF7A7A]'}">${t.status}</span></div>
+  </div>`;
+}
+
+function renderAll(){
+  let q=(document.getElementById('txSearch')?.value||'').toLowerCase();
+  let filtered=txs.filter(t=> (curFilter==='all'||t.type===curFilter) && (t.type.toLowerCase().includes(q)||String(t.amt).includes(q)) );
+  document.getElementById('homeTx').innerHTML=txs.slice(0,4).map(txRow).join('');
+  document.getElementById('fullTxList').innerHTML=filtered.map(txRow).join('')||'<p class="text-white/30 text-[12px] text-center mt-10">No transactions</p>';
+  document.getElementById('savingsList').innerHTML=goals.map(g=>`
+    <div onclick="go('safe')" class="ash-card rounded-2xl p-4 cursor-pointer">
+      <div class="flex justify-between items-start"><div class="flex gap-3 items-center"><div class="w-10 h-10 bg-[#0A234E] rounded-full flex items-center justify-center text-white">${g.icon}</div><div><p class="text-white text-[12px] font-bold">${g.name}</p><p class="text-white font-bold text-[13px]">GHS ${g.amt}</p><p class="text-[10px] text-white/40">${g.note}</p></div></div><span class="text-white/30">›</span></div>
+      <div class="mt-3"><div class="flex justify-between text-[10px] text-white/40 mb-1"><span></span><span>${g.progress}%</span></div><div class="progress-track h-1.5 rounded-full"><div class="h-full rounded-full" style="width:${g.progress}%;background:${g.color}"></div></div></div>
+    </div>`).join('');
+  let safe=goals.find(g=>g.name==='Safe Lock')||goals[2];
+  document.getElementById('safeSaved').innerText=safe.amt;
+  document.getElementById('safeProgress').style.width=safe.progress+'%';
+  document.getElementById('safePercent').innerText=safe.progress+'%';
+  document.getElementById('safeActivity').innerHTML=txs.filter(t=>t.type==='Safe Lock').slice(0,3).map(t=>`<div class="bg-[#0A234E]/60 rounded-xl p-3 flex justify-between items-center"><div class="flex gap-2 items-center"><div class="w-7 h-7 bg-[#0B3D1F] rounded-full flex items-center justify-center text-[10px]">↗</div><div><p class="text-white text-[11px]">Added to Safe Lock</p><p class="text-[9px] text-white/40">${t.date}</p></div></div><p class="text-white text-[11px] font-bold">GHS ${t.amt}</p></div>`).join('');
+}
+
+go('onboard');
+</script>
+</body>
+      </html>
